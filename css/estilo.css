@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+  
+  html {
+    height: 100%;
+  }
+
+body {
+    font-family:'Times New Roman';
+    font-size: 11pt;
+    min-height: 100%;
+    text-align: start;
+  }
+
+  .grid-container > * {
+    text-align: center;
+  }
+
+  .header{
+    grid-area: header;
+    background-color: rgb(221, 217, 195);
+}
+
+.aside{
+    grid-area: aside;
+    background-color: rgb(33, 89, 104);
+
+}
+
+.nav{
+    grid-area: nav;
+}
+
+.main{
+    grid-area: main;
+}
+
+
+
+  .grid-container {
+    display: grid;
+    grid-template:
+      "header"  
+      "navbar"  
+      "main"   
+      "sidebar" 
+      "footer"  ;
+  }
+
+  @media (min-width: 10pt) {
+    .grid-container {
+  
+        grid-template: 
+        'aside  header header' 100px
+        'aside  main   main'    50%
+        'nav  main   main'      40% 
+        'nav footer footer' 75px /
+        20%     85%     0%;
+    }
+  }
+
+  @media (min-width: 900px) {  
+.grid-container{
+    grid-template: 
+    'aside  header header' 100px
+    'aside  main   main'    50%
+    'nav  main   main'      40%
+    'nav  main   main'     auto /
+    25% 85% 0%;
+}
+}
+
+.grid-container div{
+    text-align: center;
+    color: black;
+    padding: 14px;
+}
+
+.grid-container h1{
+    font-family:'Times New Roman';
+    font-size: 36pt;  
+    text-align: center;
+    background-color: rgb(221, 217, 195);
+}
+
+.grid-container p{
+    font-family: Arial;
+    text-align: start;
+    font-size: 12pt;
+    font-style: oblique;
+    padding-left: 1pc;
+    padding-right: 2cm; 
+    padding-bottom: 5px;
+}
+
+.grid-container h6{
+    font-family: Arial;
+    text-align: start;
+    font-size: 16pt; 
+    padding-bottom: 2px;
+}
+
+.grid-container article{
+    text-align: start;
+    padding-left: 3cm;
+    color: rgb(128, 128, 128);
+    padding-bottom: 5px;
+}
+
+.grid-container h3{
+    text-align: start;
+}
+
+.grid-container img{
+    align-content: center;
+    border: 1px solid  rgb(45, 114, 133);
+}
+
+.grid-container h2{
+    font-family: 'Times New Roman';
+    text-align: start;
+    font-size: 11pt;
+    font-style: italic;
+    color: #ffffff;
+    border: 1px solid rgb(45, 114, 133);
+    background-color: rgb(33, 89, 104);
+    padding-left: 0.75cm;
+    padding-top: 0.5cm;
+    padding-bottom: 0.5cm;
+}
+
+.grid-container p text{
+    text-align: end;
+}
